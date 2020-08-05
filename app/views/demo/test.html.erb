@@ -1,0 +1,26 @@
+
+
+<h1>Hello world using test</h1>
+
+
+<%= 1+1 %> <br />
+
+<% target = "world" %>
+<%= "hello #{target}" %>
+
+
+<% @array.each do |n| %> <br />
+
+	<%= n %> <br />
+<% end %>
+
+<br />
+
+<%= link_to('Index Page', {:action => 'index'}) %> <br />
+
+
+
+id : <%= @id %> <br />
+id : <%= params[:id] %> <br />
+page : <%= @page %>
+nextpage : <%= @page.to_i + 1 %>
