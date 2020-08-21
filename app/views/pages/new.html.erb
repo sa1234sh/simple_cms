@@ -1,33 +1,16 @@
+
+
+
+
+
+
  <%= link_to("<< Back to list", pages_path, :class => 'back-link ') %>
 
  <div class="pages new">
  	<h2>Create Page</h2>
  	<%= form_for(@page) do |f| %>
- 	<table summary=" page form fields">
- 			<tr>
- 					<th>Name</th>
- 					<td><%= f.text_field(:name) %></td>
-
- 			</tr>
- 			<tr>
- 					<th>subject Id</th>
- 					<td><%= f.text_field(:subject_id) %></td>
- 			</tr>
- 			<tr>
- 							<th>permalink</th>
- 							<td><%= f.text_field(:parmalink) %></td>
- 					
- 			</tr> 
- 			<tr>
- 							<th>position</th>
- 							<td><%= f.text_field(:position) %></td>
- 					
- 			</tr> 
- 				<tr>
- 							<th>visible</th>
- 							<td><%= f.text_field(:visible) %></td>
- 					
- 			</tr>
+ 
+ <%= render(:partial => 'pform' , :locals => {:f => f}) %>
 
  	</table>
  	<div class = "form-buttons">

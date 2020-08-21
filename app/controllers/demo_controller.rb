@@ -1,6 +1,6 @@
 class DemoController < ApplicationController
   
-layout false
+layout "application"
 
   def index
   	render('index')
@@ -22,6 +22,8 @@ layout false
   	redirect_to(:action => 'test')
   end
 
+  def escape_output
+  end 
 
 end
 
