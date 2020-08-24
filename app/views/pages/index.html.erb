@@ -11,6 +11,7 @@
  			<th>parmalink</th>
  			<th>visible</th>  
  			<th>position</th>  
+ 			<th>sections</th>
  			<th>Actions</th>
  		
  		</tr>
@@ -19,8 +20,9 @@
  				<td><%= page.name %> </td>
  				<td><%= page.subject_id %></td>
  				<td><%= page.parmalink%></td>
- 				<td><%= page.visible %></td>
  				<td><%= page.position %></td>
+ 				<td><%= page.visible %></td>
+ 				<td><%= page.sections.first.id %></td>
  				
  				<td class="center"><%= status_tag(page.visible)   %></td>
  				 

@@ -1,16 +1,10 @@
- <%= link_to("<< Back to list", sections_path, :class => 'back-link ') %>
-
- <div class="sections new">
- 	<h2>update section</h2>
- 	<%= form_for(@sectopm) do |f| %>
- 
- <%= render(:partial => 'sform' , :locals => {:f => f}) %>
-
- 	</table>
- 	<div class = "form-buttons">
- 		<%= f.submit("update section")  %>
- 	</div>
-
-
- 	 
+<%= link_to("<< Back to list", sections_path, :class => 'back-link ') %>
+<div class="sections new">
+	<h2>update section</h2>
+	<%= form_for(@section) do |f| %> 
+	  <%= render(:partial => 'sform' , :locals => {:f => f}) %>
+		<div class = "form-buttons">
+			<%= f.submit("update section")  %>
+		</div>
+	<% end %>
  </div>

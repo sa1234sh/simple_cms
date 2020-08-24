@@ -21,7 +21,7 @@ before_action :set_section_count , :only => [:new , :create , :edit , :update]
     @section = Section.create(section_params)
     if @section.save
       flash[:notice] = "Section created Successfully"
-      redirect_to(section_path)
+      redirect_to(sections_path)
     else
       render('new')
     end
@@ -56,7 +56,7 @@ before_action :set_section_count , :only => [:new , :create , :edit , :update]
 private
 
 def section_params
-  params.requaire(:section).permit(:page_id , :name , :postion , :visible , :content_type , :content )
+  params.require(:section).permit(:page_id , :name , :postion , :visible , :content_type , :content )
 end
 
 def find_pages

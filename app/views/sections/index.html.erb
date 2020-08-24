@@ -14,16 +14,16 @@
  			<th>visible</th>
  			<th>Actions</th>
  		</tr>
- 	   	  <% @sections.each do |subject| %>
+ 	   	  <% @sections.each do |section| %>
  			<tr>
- 				<td><%= section.position %> </td>
+ 				<td><%= section.postion %> </td>
  				<td><%= section.page_id %></td>
  				<td><%= section.name %></td>
- 				<td class="center"><%= status_tag(subject.visible)  %></td>
+ 				<td class="center"><%= status_tag(section.visible)  %></td>
  				 <td class="actions">
- 					<%= link_to("Show", section_path(subject), :class => 'action show') %>
- 					<%= link_to("Edit", edit_section_path(subject), :class => 'action edit') %>
- 					<%= link_to("Delete",  delete_section_path(subject), :class => 'action delete') %>
+ 					<%= link_to("Show", section_path(section), :class => 'action show') %>
+ 					<%= link_to("Edit", edit_section_path(section), :class => 'action edit') %>
+ 					<%= link_to("Delete",  delete_section_path(section), :class => 'action delete') %>
  				</td>
  			</tr> 
  		  <% end %>
